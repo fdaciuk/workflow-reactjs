@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -14,7 +16,8 @@
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-validator": "^2.2.2",
-    "whacko": "^0.19.1"
+    "whacko": "^0.19.1",
+    "@kadira/storybook": "^2.21.0"
   },
   "dependencies": {
     "react": "^15.1.0",
