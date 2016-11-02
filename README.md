@@ -4,11 +4,12 @@ This workflow includes:
 
 1. Webpack;
 * Babel;
-* React hot loader
+* React hot loader;
+* HTML and CSS generated automatically by webpack
 
 ## Dependencies:
 
-- NodeJS >= 6;
+- `NodeJS >= 6`;
 
 ## Up and running
 
@@ -16,6 +17,7 @@ This workflow includes:
 - Remove `.git` directory;
 - Install dependencies: `npm i`;
 - Run `npm start` to develop on `http://localhost:3000`
+- Run `npm run build` for production build (files will be generated on `dist` directory)
 
 ## License
 
