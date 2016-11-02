@@ -5,6 +5,7 @@ const webpack = require('webpack')
 const validate = require('webpack-validator')
 
 const HtmlPlugin = require('html-webpack-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 module.exports = validate({
   devtool: 'source-map',
@@ -24,6 +25,8 @@ module.exports = validate({
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new DashboardPlugin(),
+
     new HtmlPlugin({
       title: 'My app',
       template: path.join(__dirname, 'src', 'html', 'template.html')

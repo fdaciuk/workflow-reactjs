@@ -24,17 +24,17 @@ module.exports = validate({
       }
     }),
 
+    new HtmlPlugin({
+      title: 'GitHub app',
+      template: path.join(__dirname, 'src', 'html', 'template.html')
+    }),
+
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false }
     }),
 
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-
-    new HtmlPlugin({
-      title: 'GitHub app',
-      template: path.join(__dirname, 'src', 'html', 'template.html')
-    })
+    new webpack.optimize.OccurrenceOrderPlugin()
   ],
 
   module: {
