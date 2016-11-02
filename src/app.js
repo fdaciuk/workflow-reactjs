@@ -2,6 +2,8 @@
 
 import React from 'react'
 
+import './css/style.css'
+
 const App = () => (
   <div>My App</div>
 )
