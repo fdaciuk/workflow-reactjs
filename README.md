@@ -23,12 +23,12 @@
 
 ## Scripts
 
-`yarn start (or npm start)`: Starts the application
-`yarn test (or npm test)`: Run tests once
-`yarn test:watch (or npm run test:watch)`: Run tests in watch mode
-`yarn build (or npm run build)`: Build project to production
-`yarn storybook (or npm run storybook)`: Run Storybook on 6006 port
-`yarn build-storybook`: Build Storybook to static files
+- `yarn start (or npm start)`: Starts the application
+- `yarn test (or npm test)`: Run tests once
+- `yarn test:watch (or npm run test:watch)`: Run tests in watch mode
+- `yarn build (or npm run build)`: Build project to production
+- `yarn storybook (or npm run storybook)`: Run Storybook on 6006 port
+- `yarn build-storybook`: Build Storybook to static files
 
 ## License
 
