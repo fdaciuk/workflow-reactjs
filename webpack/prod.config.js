@@ -21,7 +21,7 @@ module.exports = validate({
       }
     }),
 
-    new HtmlPlugin(common.htmlPluginConfig('template.html')),
+    new HtmlPlugin(common.htmlPluginConfig),
 
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false }

@@ -10,10 +10,10 @@ module.exports = {
     filename: '[name]-[hash].js'
   },
 
-  htmlPluginConfig: (template) => ({
-    title: 'GitHub app',
-    template: path.join(__dirname, '..', 'src', 'html', template)
-  }),
+  htmlPluginConfig: {
+    title: 'My app',
+    template: path.join(__dirname, '..', 'src', 'html', 'template.html')
+  },
 
   standardPreLoader: {
     test: /\.js$/,

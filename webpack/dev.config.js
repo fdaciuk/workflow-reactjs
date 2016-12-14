@@ -26,7 +26,7 @@ module.exports = validate({
     new webpack.HotModuleReplacementPlugin(),
     new DashboardPlugin(),
 
-    new HtmlPlugin(common.htmlPluginConfig('template.html'))
+    new HtmlPlugin(common.htmlPluginConfig)
   ],
 
   module: {
