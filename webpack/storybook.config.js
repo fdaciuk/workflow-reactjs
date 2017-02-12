@@ -3,11 +3,32 @@
 const common = require('./common')
 const webpackConfig = require('@kadira/storybook/dist/server/config/defaults/webpack.config.js')
 
-module.exports = function (config, env) {
+module.exports = (config, env) => {
   const newConfig = webpackConfig(config, env)
 
-  newConfig.module.use = newConfig.module.loaders.concat(common.standardPreLoader)
+  const preloaders = Object.assign({}, common.standardPreLoader, {
+    use: undefined,
+    loader: common.standardPreLoader.use
+  })
+
+  newConfig.module.preLoaders = [preloaders]
   newConfig.resolve = common.resolve
+
+  newConfig.module.loaders = newConfig.module.loaders.map((loader) => {
+    if (loader.test.test('test.js')) {
+      return Object.assign({}, loader, {
+        query: Object.assign({}, loader.query, {
+          presets: loader.query.presets.map((preset, index) => {
+            if (index === 0) {
+              return 'es2015'
+            }
+            return preset
+          })
+        })
+      })
+    }
+    return loader
+  })
 
   return newConfig
 }
