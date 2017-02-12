@@ -2,12 +2,14 @@
 
 ## What's inside it?
 
-1. Webpack;
+1. Webpack 2;
 * Babel;
 * React hot loader;
 * HTML and CSS generated automatically by webpack;
 * Jest for tests and Chai for assertions;
 * Storybook to create isolatelly components' stories
+* Async/await
+* Webpack tree shaking!
 
 ## Dependencies:
 
@@ -29,6 +31,7 @@
 - `yarn build (or npm run build)`: Build project to production
 - `yarn storybook (or npm run storybook)`: Run Storybook on 6006 port
 - `yarn build-storybook`: Build Storybook to static files
+- `yarn update-packages`: Update all packages to the latest version
 
 ## License
 
