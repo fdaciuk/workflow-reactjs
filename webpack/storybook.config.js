@@ -18,9 +18,10 @@ module.exports = (config, env) => {
     if (loader.test.test('test.js')) {
       return Object.assign({}, loader, {
         query: Object.assign({}, loader.query, {
-          presets: loader.query.presets.map((preset, index) => {
-            if (index === 0) {
-              return 'es2015'
+          presets: loader.query.presets.map((preset) => {
+            console.log(preset)
+            if (Array.isArray(preset) && preset[0] === 'es2015') {
+              return preset[0]
             }
             return preset
           })
