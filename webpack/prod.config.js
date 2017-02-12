@@ -14,7 +14,7 @@ module.exports = {
 
   plugins: [
     new CleanPlugin(['dist'], {
-      root: join(__dirname, '..')
+      root: common.paths.root
     }),
 
     new ExtractTextPlugin({
