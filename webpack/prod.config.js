@@ -1,7 +1,6 @@
 'use strict'
 
 const webpack = require('webpack')
-const { join } = require('path')
 const common = require('./common')
 
 const HtmlPlugin = require('html-webpack-plugin')
