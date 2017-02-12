@@ -16,24 +16,25 @@ module.exports = {
   },
 
   standardPreLoader: {
+    enforce: 'pre',
     test: /\.js$/,
     exclude: /node_modules/,
     include: /src/,
-    loader: 'standard'
+    use: 'standard-loader'
   },
 
   jsLoader: {
     test: /\.js$/,
     exclude: /node_modules/,
     include: /src/,
-    loader: 'babel'
+    use: 'babel-loader'
   },
 
   cssLoader: {
     test: /\.css$/,
     exclude: /node_modules/,
     include: /src/,
-    loaders: ['style', 'css']
+    use: ['style-loader', 'css-loader']
   },
 
   resolve: {
