@@ -11,7 +11,7 @@ module.exports = (config, env) => {
     loader: common.standardPreLoader.use
   })
 
-  newConfig.module.loaders = newConfig.module.loaders.concat(preloaders)
+  newConfig.module.preLoaders = (newConfig.module.preLoaders || []).concat(preloaders)
   newConfig.resolve = common.resolve
 
   return newConfig
