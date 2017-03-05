@@ -1,14 +1,16 @@
 'use strict'
 
 import React, { Component } from 'react'
-import Title from 'components/title'
 
 import './css/style.css'
 
 class App extends Component {
   constructor () {
     super()
-    this.state = { title: '...' }
+    this.state = {
+      title: '...',
+      Component: 'div'
+    }
   }
 
   getTitle () {
@@ -20,15 +22,19 @@ class App extends Component {
   }
 
   async componentDidMount () {
+    const title = await import('components/title')
+
     this.setState({
-      title: await this.getTitle()
+      title: await this.getTitle(),
+      Component: title.default
     })
+
   }
 
   render () {
     return (
       <div>
-        <Title>{this.state.title}</Title>
+        <this.state.Component>{this.state.title}</this.state.Component>
       </div>
     )
   }
