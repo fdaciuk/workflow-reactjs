@@ -28,7 +28,6 @@ class App extends Component {
       title: await this.getTitle(),
       Component: title.default
     })
-
   }
 
   render () {
