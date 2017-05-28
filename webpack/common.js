@@ -40,7 +40,20 @@ module.exports = {
   jsLoader: {
     test: /\.js$/,
     include: paths.src,
-    use: 'babel-loader'
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['env', 'stage-0', 'react'],
+        plugins: [
+          'react-hot-loader/babel',
+          ['transform-runtime', {
+            helpers: false,
+            polyfill: false,
+            regenerator: true
+          }]
+        ]
+      }
+    }
   },
 
   cssLoader: {
