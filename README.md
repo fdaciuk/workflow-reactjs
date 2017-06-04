@@ -2,11 +2,11 @@
 
 ## What's inside it?
 
-1. Webpack 2;
-* Babel;
-* React hot loader;
-* HTML and CSS generated automatically by webpack;
-* Jest for tests and Chai for assertions;
+* Webpack 2
+* Babel
+* React hot loader
+* HTML and CSS generated automatically by webpack
+* Jest for tests and Chai for assertions
 * Storybook to create isolatelly components' stories
 * Async/await
 * Dynamic `import()` function
