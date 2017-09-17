@@ -40,12 +40,11 @@ module.exports = {
   jsLoader: {
     test: /\.js$/,
     include: paths.src,
-    use: {
+    use: ['react-hot-loader/webpack', {
       loader: 'babel-loader',
       options: {
         presets: [['env', { modules: false }], 'stage-0', 'react'],
         plugins: [
-          'react-hot-loader/babel',
           ['transform-runtime', {
             helpers: false,
             polyfill: false,
@@ -53,7 +52,7 @@ module.exports = {
           }]
         ]
       }
-    }
+    }]
   },
 
   cssLoader: {
