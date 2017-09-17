@@ -2,7 +2,7 @@
 
 ## What's inside it?
 
-* Webpack 2
+* Webpack 3+
 * Babel
 * React hot loader
 * HTML and CSS generated automatically by webpack
