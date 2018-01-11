@@ -40,19 +40,7 @@ module.exports = {
   jsLoader: {
     test: /\.js$/,
     include: paths.src,
-    use: ['react-hot-loader/webpack', {
-      loader: 'babel-loader',
-      options: {
-        presets: [['env', { modules: false }], 'stage-0', 'react'],
-        plugins: [
-          ['transform-runtime', {
-            helpers: false,
-            polyfill: false,
-            regenerator: true
-          }]
-        ]
-      }
-    }]
+    use: 'babel-loader'
   },
 
   cssLoader: {
