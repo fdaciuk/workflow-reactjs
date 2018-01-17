@@ -1,6 +1,8 @@
 'use strict'
 
 import React, { PureComponent } from 'react'
+import { hot, setConfig } from 'react-hot-loader'
+setConfig({ logLevel: 'debug' })
 
 import './css/style.css'
 
@@ -22,7 +24,7 @@ class App extends PureComponent {
   }
 
   async componentDidMount () {
-    const title = await import('components/title')
+    const title = await import('components/title') // eslint-disable-line
 
     this.setState({
       title: await this.getTitle(),
@@ -39,4 +41,4 @@ class App extends PureComponent {
   }
 }
 
-export default App
+export default hot(module)(App)
