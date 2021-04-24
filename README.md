@@ -1,6 +1,11 @@
-# Workflow ReactJS
+## Workflow ReactJS
 
-## What's inside it?
+# :warning: Disclaimer
+Instead of using this project, prefer [Create React App](https://create-react-app.dev/)
+
+---
+
+### What's inside it?
 
 * Webpack 3+
 * Babel
@@ -13,11 +18,11 @@
 * Webpack tree shaking!
 * [Preact](https://preactjs.com/) for production build (optional)
 
-## Dependencies:
+### Dependencies:
 
 - Node.js `>=` v6;
 
-## Up and running
+### Up and running
 
 - Clone this repository: `git clone git@github.com:fdaciuk/workflow-reactjs.git`;
 - Remove `.git` directory;
@@ -25,7 +30,7 @@
 - Run `yarn dev` (or `npm start`) to develop on `http://localhost:3000`
 - Run `yarn build` (or `npm run build`) for production build (files will be generated on `dist` directory)
 
-## Troubleshooting
+### Troubleshooting
 
 If you are on Windows, and try to run `yarn lint`, you'll get an error
 because `spawn` module does not work very well on Windows.
