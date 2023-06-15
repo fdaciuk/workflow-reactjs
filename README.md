@@ -1,7 +1,7 @@
 ## Workflow ReactJS
 
 # :warning: Disclaimer
-Instead of using this project, prefer [Create React App](https://create-react-app.dev/)
+Instead of using this project, prefer [better](https://github.com/fdaciuk/boilerplate-vite-react) and [modern alternatives](https://react.dev/learn/start-a-new-react-project)
 
 ---
 
